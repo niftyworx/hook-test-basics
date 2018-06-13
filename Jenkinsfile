@@ -11,6 +11,7 @@ node{
    stage 'build'
    //sh 'echo "write your deploy code here";'
 
+   sh whoami
    sh './test.sh'
 
    stage 'deploy Production'
