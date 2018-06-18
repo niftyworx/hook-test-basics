@@ -1,5 +1,11 @@
 #!groovy
 pipeline {
+  agent any
+  options {
+    timeout(time: 1, unit: 'HOURS')
+    timestamps()
+    disableConcurrentBuilds()
+  }
   stages {
     stage('Checkout SCM') {
       steps {
